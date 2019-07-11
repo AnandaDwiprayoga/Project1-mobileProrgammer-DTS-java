@@ -18,6 +18,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvItem"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"></androidx.recyclerview.widget.RecyclerView>
+
     <TextView
         android:id="@+id/labelNama"
         android:layout_width="wrap_content"
@@ -25,9 +34,9 @@
         android:layout_marginTop="24dp"
         android:text="Nama"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/inputNama"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/inputNama"
-        app:layout_constraintBottom_toBottomOf="@id/inputNama"/>
+        app:layout_constraintTop_toTopOf="@id/inputNama" />
 
     <TextView
         android:layout_width="10dp"
@@ -35,22 +44,22 @@
         android:layout_marginTop="24dp"
         android:text="="
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/inputNama"
         app:layout_constraintEnd_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="@id/inputNama"
-        app:layout_constraintBottom_toBottomOf="@id/inputNama"/>
+        app:layout_constraintTop_toTopOf="@id/inputNama" />
 
     <EditText
         android:id="@+id/inputNama"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
         android:hint="Your Name"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@id/judulForm"
-        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="24dp"/>
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/judulForm" />
 
     <!--new line 1-->
     <TextView
@@ -60,31 +69,31 @@
         android:layout_marginTop="16dp"
         android:text="No Telp"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/inputNoTelp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/inputNoTelp"
-        app:layout_constraintBottom_toBottomOf="@id/inputNoTelp"/>
+        app:layout_constraintTop_toTopOf="@id/inputNoTelp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="="
         android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/inputNoTelp"
         app:layout_constraintBottom_toBottomOf="@id/inputNoTelp"
         app:layout_constraintEnd_toStartOf="@id/guideline"
-        android:layout_marginTop="15dp"/>
+        app:layout_constraintTop_toTopOf="@id/inputNoTelp" />
 
     <EditText
         android:id="@+id/inputNoTelp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
         android:hint="No Telephone"
         android:inputType="phone"
-        app:layout_constraintTop_toBottomOf="@id/inputNama"
-        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="24dp"/>
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/inputNama" />
 
     <!-- new line 2-->
     <TextView
@@ -92,35 +101,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:inputType="textPostalAddress"
         android:text="Alamat"
         android:textSize="18sp"
-        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="@id/inputAlamat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/inputAlamat"
-        app:layout_constraintBottom_toBottomOf="@id/inputAlamat"/>
+        app:layout_constraintTop_toTopOf="@id/inputAlamat" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="="
         android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/inputAlamat"
         app:layout_constraintBottom_toBottomOf="@id/inputAlamat"
         app:layout_constraintEnd_toStartOf="@id/guideline"
-        android:layout_marginTop="15dp"/>
+        app:layout_constraintTop_toTopOf="@id/inputAlamat" />
 
     <EditText
         android:id="@+id/inputAlamat"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
         android:hint="Alamat"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@id/inputNoTelp"
-        app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="24dp"/>
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/inputNoTelp" />
 
 
     <androidx.constraintlayout.widget.Guideline
@@ -134,29 +143,31 @@
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputAlamat"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/inputAlamat">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BNI"/>
+            android:text="BNI" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BRI"/>
+            android:text="BRI" />
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BCA"/>
+            android:text="BCA" />
+
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CASH"/>
+            android:text="CASH" />
     </RadioGroup>
 
     <TextView
@@ -164,20 +175,85 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:inputType="textPostalAddress"
         android:text="Pembayaran"
         android:textSize="18sp"
-        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="@id/radioGroup"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/radioGroup"
-        app:layout_constraintBottom_toBottomOf="@id/radioGroup"/>
+        app:layout_constraintTop_toTopOf="@id/radioGroup" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="="
         android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="@id/radioGroup"
         app:layout_constraintBottom_toBottomOf="@id/radioGroup"
         app:layout_constraintEnd_toStartOf="@id/guideline"
-        android:layout_marginTop="15dp"/>
+        app:layout_constraintTop_toTopOf="@id/radioGroup" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PESANANMU"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Total Harga"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline3" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rp. 00000000"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PESAN SEKARANG"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:background="@drawable/button"
+        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
